@@ -1,0 +1,35 @@
+  <div class="list">
+                <ul>
+                    <li class="first">Past</li>
+                    <li class="sec">Present</li>
+                    <li class="third">Future</li>
+                </ul>
+            </div>
+
+            
+
+.parallax-container{
+   
+    width: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+ 
+
+    .bottom-text{
+        text-align: center;
+    }
+
+    ul {
+       
+        display: flex;
+        list-style-type: none;   
+    }
+    
+    li{
+        padding: 5rem;
+    }
+}

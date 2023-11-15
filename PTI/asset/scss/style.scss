@@ -1,0 +1,237 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+header{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    align-self: center;
+
+}
+.uika {
+    display: flex;
+    position: relative;
+    z-index: 3;
+    margin-top: 20px;
+    justify-content: center;
+    img{
+        height: 50px;
+    }
+ }
+
+ .video-container {
+    
+    height: 100vh;
+   background-size: cover;
+    position: relative;
+   
+
+    h2{
+        position: relative;
+        z-index: 1;
+        align-items: center;
+        transform: translateY(100%);
+    }
+
+     video{
+        
+            width: 100%;
+             height: 100%;
+            position: absolute;
+             object-fit: cover;
+             z-index: 0;
+            transform: translateX(-50%) translateY(-50%);
+            top: 50%;
+            left: 50%;
+             min-width: 100%;
+  min-height: 100%;
+
+    }
+
+     .caption {
+         z-index: 1;
+         width: auto;
+         height: auto;
+         position: relative;
+         text-align: center;
+        top: 55%;
+        bottom: 55%;
+         align-items: center;
+        color: #dc0000;
+        font-family: 'Istok Web', sans-serif;
+      }
+
+     
+ }
+ .video-container::before{
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    background: rgb(0, 0, 0, 0.5);
+    
+}
+/*  arrow */
+
+.container {
+  
+	width: auto;
+	height: 94.4vh;
+  
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+	justify-content: center;
+    
+   
+}
+
+.inner_con{
+    display: flex;
+    justify-content: space-between;
+    display: flex;
+    position: relative;
+    
+}
+
+.scrolldown{
+    z-index: 1;
+    position: absolute;
+    width: auto;
+    height: auto;
+    margin-bottom: 15px;
+    bottom: 0;
+    color: #e4e4e4;
+    text-align: center;
+    font-size: 10px;
+    margin-left: 12px;
+    font-family: 'Istok Web', sans-serif;
+    transform: translateY(-120%);
+}
+
+.field {
+    position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100px;
+}
+
+.mouse {
+	width: 25px;
+	height: 48.5px;
+	border: 3px solid #f2f2f2;
+	border-radius: 60px;
+	position: relative;
+    z-index: 1;
+    margin-left: 45px;
+    margin-top: 20px;
+    transform: translateY(390%);
+
+	&::before {
+		content: '';
+		width: 3px;
+		height: 7px;
+		position: absolute;
+		top: 5px;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color: #f2f2f2;
+		border-radius: 50%;
+		opacity: 1;
+		animation: wheel 2.2s infinite;
+		-webkit-animation: wheel 2.2s infinite;
+	}
+}
+
+@keyframes wheel {
+	to {
+		opacity: 0;
+		top: 30px;
+	}
+}
+
+// Parallex
+
+.container-parrallax{
+    height: 100vh;
+    width: 100%;
+    background-image: url("/asset/img/maxresdefault.jpg" );
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    background-size: cover;
+
+    
+
+    .list-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    ul{
+        display: flex;
+        position: absolute;
+        z-index: 4;
+      
+       
+        list-style: none;
+    }
+
+    a{
+        text-decoration: none;
+        color: #e4e4e4;
+    }
+    li{
+        padding: 5rem;
+        color: #f2f2f2;
+    }
+    }
+}
+
+.container-parrallax::before{
+    content: '';
+    width: 100%;
+    height: 100vh;
+    display: block;
+    position: absolute;
+    background: rgb(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.first::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background: white;
+    height: 50px;
+    width: 2px;
+    right: 65%;
+    transform: translateY(-30%);
+}
+
+.sec::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background: white;
+    height: 50px;
+    width: 2px;
+    right: 35%;
+    transform: translateY(-30%);
+}
