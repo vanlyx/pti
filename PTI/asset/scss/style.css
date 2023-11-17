@@ -54,7 +54,12 @@ header {
   left: 50%;
   min-width: 100%;
   min-height: 100%;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
+
+
 .video-container .caption {
   z-index: 1;
   width: auto;
@@ -64,8 +69,20 @@ header {
   top: 55%;
   bottom: 55%;
   align-items: center;
-  color: #dc0000;
+  color: white;
   font-family: "Istok Web", sans-serif;
+  animation: fadeInAnimation ease 8s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
 }
 
 .video-container::before {
@@ -153,7 +170,7 @@ header {
 .container-parrallax {
   height: 100vh;
   width: 100%;
-  background-image: url("/asset/img/maxresdefault.jpg");
+  background-image: url("../img/maxresdefault.jpg");
   background-attachment: fixed;
   display: flex;
   justify-content: center;
